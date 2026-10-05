@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+
+<style>
+	.accordion {
+  width: 400px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+.item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item input {
+  display: none;
+}
+
+.item label {
+  display: block;
+  padding: 15px;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.item .content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  background: white;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* When checked, show content */
+.item input:checked ~ .content {
+  max-height: 200px;
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="accordion">
+
+  <div class="item">
+    <input type="checkbox" id="q1">
+    <label for="q1">What is HTML?</label>
+    <div class="content">
+      HTML is a markup language used to structure web pages.
+    </div>
+  </div>
+
+  <div class="item">
+    <input type="checkbox" id="q2">
+    <label for="q2">What is CSS?</label>
+    <div class="content">
+      CSS is used to style and design web pages.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

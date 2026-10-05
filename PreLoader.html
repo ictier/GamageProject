@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+	<style>
+		.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.pulse {
+  width: 20px;
+  height: 20px;
+  background: #e74c3c;
+  border-radius: 50%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.8); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+.bars {
+  display: flex;
+  gap: 5px;
+}
+
+.bars div {
+  width: 8px;
+  height: 40px;
+  background: #2ecc71;
+  animation: bounce 1s infinite;
+}
+
+.bars div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bars div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  background: black;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+	</style>
+</head>
+<body>
+
+<div class="loader"></div>
+
+<br>
+<div class="pulse"></div>
+
+<br>
+<div class="bars">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<br>
+<div class="dots">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+
+</body>
+</html>

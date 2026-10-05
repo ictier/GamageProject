@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Province & District</title>
+</head>
+<body>
+
+
+
+<select id="province" onchange="showDistricts()">
+    <option value="">Select Province</option>
+    <option>Western</option>
+    <option>Central</option>
+    <option>Southern</option>
+</select>
+
+<select id="district"></select>
+
+<script>
+function showDistricts() {
+    let province = document.getElementById("province").value;
+    let district = document.getElementById("district");
+
+    district.innerHTML = "";
+
+    if (province === "Western") {
+        district.innerHTML =
+            "<option>Colombo</option>" +
+            "<option>Gampaha</option>" +
+            "<option>Kalutara</option>";
+    }
+    else if (province === "Central") {
+        district.innerHTML =
+            "<option>Kandy</option>" +
+            "<option>Matale</option>" +
+            "<option>Nuwara Eliya</option>";
+    }
+    else if (province === "Southern") {
+        district.innerHTML =
+            "<option>Galle</option>" +
+            "<option>Matara</option>" +
+            "<option>Hambantota</option>";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Province & District</title>
+</head>
+<body>
+
+<label>Province:</label>
+<select id="province">
+    <option value="">Select Province</option>
+    <option value="Western">Western</option>
+    <option value="Central">Central</option>
+    <option value="Southern">Southern</option>
+</select>
+
+<br><br>
+
+<label>District:</label>
+<select id="district">
+    <option value="">Select District</option>
+</select>
+
+<script>
+const districts = {
+    Western: [
+        "Colombo",
+        "Gampaha",
+        "Kalutara"
+    ],
+    Central: [
+        "Kandy",
+        "Matale",
+        "Nuwara Eliya"
+    ],
+    Southern: [
+        "Galle",
+        "Matara",
+        "Hambantota"
+    ]
+};
+
+document.getElementById("province").addEventListener("change", function () {
+
+    const province = this.value;
+    const districtSelect = document.getElementById("district");
+
+    districtSelect.innerHTML =
+        '<option value="">Select District</option>';
+
+    if (province) {
+        districts[province].forEach(function(district) {
+            const option = document.createElement("option");
+            option.value = district;
+            option.textContent = district;
+            districtSelect.appendChild(option);
+        });
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Common Parallax Section */
+.parallax {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section backgrounds */
+.p1 {
+  background-image: url("img1.jpg");
+}
+
+.p2 {
+  background-image: url("img2.jpg");
+}
+
+.p3 {
+  background-image: url("img3.jpg");
+}
+
+/* Text overlay */
+.text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.text h1 {
+  font-size: 50px;
+}
+
+.text p {
+  font-size: 20px;
+}
